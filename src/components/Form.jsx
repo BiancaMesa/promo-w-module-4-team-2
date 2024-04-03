@@ -84,7 +84,7 @@ function Form({ handleFormAdd, addFormData, setUpdateAvatar, setProjectImg, hand
           )}    
         </div>
         <Link to="/cardDetails">
-          <button>Ver Tarjeta Proyecto</button>
+          <button className="seeProjectCard-btn">Ver Tarjeta Proyecto</button>
         </Link>
       </fieldset>
     </form>
