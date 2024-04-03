@@ -173,7 +173,12 @@ function App() {
           element={
             <>
               <Header />
-              <Projects />
+              <Projects 
+                  addFormData={addFormData}
+                  setAddFormData={setAddFormData}
+                  updateAvatar={updateAvatar}
+                  updateProjectImg={updateProjectImg}
+                  handleReset={handleReset}/>
               <Footer />
             </>
           }
