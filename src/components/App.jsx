@@ -133,7 +133,7 @@ function App() {
 
               <main className="main">
                 <section className="hero">
-                  <Link to="/" style={{ textDecoration: "none" }}>
+                  <Link to="/">
                     <h2 className="title">Proyectos Paintones</h2>
                   </Link>
                   <p className="hero__text">
