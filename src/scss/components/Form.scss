@@ -158,9 +158,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  //margin-left: 20px;
-
-
 }
 
 .URLcontainer {
@@ -200,14 +197,19 @@
 .seeProjectCard-btn {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-image: linear-gradient(145deg, $color-dark-lilac, #c0b7e8);
-  color: $color-white;
+  margin-top: 16px;
+  padding: 12px 30px;
+  //background-image: linear-gradient(145deg, $color-dark-lilac, #c0b7e8);
+  background-color: rgb(253, 251, 255);
+  //background-color: transparent;
+  //color: $color-white;
+  //color: $color-black;
+  color: $color-dark-lilac;
   font-family: $font-button;
   text-decoration: none;
   border-radius: 25px;
   border: 2px solid $color-white;
+  //border: 2px solid $color-dark-lilac;
   transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none; //NO FUNCIONA!!! --> SOLO CON LOS a: que he puesto en reset
   cursor: pointer;
