@@ -1,4 +1,5 @@
 //import Button from "./Button";
+import {Link} from "react-router-dom";
 import GetAvatar from "./GetAvatar";
 import "../scss/components/Form.scss";
 import PropTypes from "prop-types";
@@ -80,8 +81,11 @@ function Form({ handleFormAdd, addFormData, setUpdateAvatar, setProjectImg, hand
             <div className="URLcontainer">
               <a href={previewUrl} target="_blank">Ver Tarjeta</a>
             </div>
-          )}
+          )}    
         </div>
+        <Link to="/cardDetails">
+          <button>Ver Tarjeta Proyecto</button>
+        </Link>
       </fieldset>
     </form>
   );
@@ -93,6 +97,7 @@ Form.propTypes = {
   setUpdateAvatar: PropTypes.func.isRequired,
   setProjectImg: PropTypes.func.isRequired,
   handlePost: PropTypes.func.isRequired,
+  previewUrl: PropTypes.string
 }
 export default Form;
 

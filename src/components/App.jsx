@@ -6,7 +6,9 @@ import Preview from "./Preview";
 import Form from "./Form";
 import Footer from "./Footer";
 import LandingPage from "./LandingPage";
+import Projects from "./Projects";
 import "../scss/App.scss";
+import CardDetails from "./CardDetails";
 
 function App() {
   const defaultAvatar =
@@ -131,16 +133,16 @@ function App() {
 
               <main className="main">
                 <section className="hero">
-                  <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <h2 className="title">Proyectos Paintones</h2>
                   </Link>
                   <p className="hero__text">
                     Escaparate en línea para recoger ideas a través de la
                     tecnología
                   </p>
-                  <a className="button--link" href="./">
+                  <Link to="/projects" className="button--link">
                     Ver proyectos
-                  </a>
+                  </Link>
                 </section>
 
                 <Preview
@@ -161,6 +163,34 @@ function App() {
                 />
               </main>
 
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/projects"
+          element={
+            <>
+              <Header />
+              <Projects />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/cardDetails"
+          element={
+            <>
+              <Header />
+              <CardDetails
+                  addFormData={addFormData}
+                  setAddFormData={setAddFormData}
+                  updateAvatar={updateAvatar}
+                  updateProjectImg={updateProjectImg}
+                  handleReset={handleReset}
+                />
               <Footer />
             </>
           }

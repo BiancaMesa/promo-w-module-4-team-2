@@ -1,7 +1,7 @@
 import "../scss/components/Preview.scss";
 import PropTypes from "prop-types";
 
-function Preview({
+function CardDetails({
   addFormData, updateAvatar, updateProjectImg, previewUrl, handleReset }) {
 
 
@@ -62,12 +62,12 @@ function Preview({
   );
 }
 
-Preview.propTypes = {
-  addFormData: PropTypes.object.isRequired,
-  updateAvatar: PropTypes.string.isRequired,
-  updateProjectImg: PropTypes.string.isRequired,
+CardDetails.propTypes = {
+  addFormData: PropTypes.object,
+  updateAvatar: PropTypes.string,
+  updateProjectImg: PropTypes.string,
   previewUrl: PropTypes.string,
-  handleReset: PropTypes.func.isRequired
+  handleReset: PropTypes.func
 };
 
-export default Preview;
+export default CardDetails;

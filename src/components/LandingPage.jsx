@@ -5,14 +5,18 @@ import "../scss/components/LandingPage.scss";
 function LandingPage() {
   return (
     <div className="landingContainer">
-      <h1 className="landingContainer__title">Welcome to Project Paintones</h1>
+      <h1 className="landingContainer__title">Bienvenida a Proyectos Paintones</h1>
       <img
         className="landingContainer__mainImage"
         src={mainImage}
         alt="proyectos-paintones"
       />
       <Link to="/card">
-        <button className="landingContainer__button">Create card</button>
+        <button className="landingContainer__button">Crear tarjeta</button>
+      </Link>
+
+      <Link to="/projects">
+        <button className="landingContainer__button">Ver proyectos</button>
       </Link>
     </div>
   );
