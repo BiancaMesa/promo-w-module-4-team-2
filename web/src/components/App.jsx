@@ -190,7 +190,9 @@ function App() {
                   setAddFormData={setAddFormData}
                   updateAvatar={updateAvatar}
                   updateProjectImg={updateProjectImg}
-                  handleReset={handleReset}/>
+                  handleReset={handleReset}
+                  projectsList={projectsList}
+              />
               <Footer />
             </>
           }
