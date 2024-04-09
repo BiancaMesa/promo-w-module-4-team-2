@@ -60,7 +60,10 @@ function App() {
       const data = await response.json(); 
       setProjectsList(data.message); 
     }
+    getProjects();
   }, []);
+
+ 
 
   const handlePost = (event) => {
     event.preventDefault();
