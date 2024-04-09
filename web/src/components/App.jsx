@@ -38,6 +38,7 @@ function App() {
   );
   const [addFormData, setAddFormData] = useState(savedForm);
   const [previewUrl, setPreviewUrl] = useState("");
+  const [projectsList, setProjectsList] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("form", JSON.stringify(addFormData));
@@ -52,6 +53,14 @@ function App() {
       [name]: value,
     });
   };
+
+  useEffect (() => {
+    async function getProjects() {
+      const response = await fetch("http://localhost:4000/projects");
+      const data = await response.json(); 
+      setProjectsList(data.message); 
+    }
+  }, []);
 
   const handlePost = (event) => {
     event.preventDefault();
