@@ -69,7 +69,7 @@ function App() {
     event.preventDefault();
     console.log("clicko");
 
-    fetch("https://dev.adalab.es/api/projectCard", {
+    fetch("http://localhost:4000/projects", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -93,15 +93,15 @@ function App() {
         }
         return response.json();
       })
-      .then((data) => {
-        if (data.cardURL) {
-          setPreviewUrl(data.cardURL);
-        } else {
-          console.error(
-            "El campo cardURL no está presente en la respuesta de la API"
-          );
-        }
-      })
+      // .then((data) => {
+      //   if (data.cardURL) {
+      //     setPreviewUrl(data.cardURL);
+      //   } else {
+      //     console.error(
+      //       "El campo cardURL no está presente en la respuesta de la API"
+      //     );
+      //   }
+      // })
       .catch((error) => {
         console.error("Error submitting project data:", error);
       });
