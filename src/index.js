@@ -58,6 +58,24 @@ server.get("/projects", async (req, res) => {
     
 });
 
+server.post("/projects", async (req, res) => {
+const connection = await getDBConnection();
+const authorQuerySql = "INSERT INTO author (authorName, jobName, authorImage) VALUES (?, ?, ?)";
+const [authorResult] = await connection.query(authorQuerySql, [req.body.autor, req.body.job, req.body.photo]);
+const projectQuerySql = "INSERT INTO projectData (projectName, slogan, repo, demo, techs, description, projectImage, fk_idAuthor) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+const [projectResult] = await connection.query(projectQuerySql, [
+    req.body.name,
+    req.body.slogan,
+    req.body.repo,
+    req.body.demo,
+    req.body.technologies,
+    req.body.desc,
+    req.body.image,
+    authorResult.insertId
+]);
+res.status(201).json({success: true, id:projectResult.insertId});
+});
+
 
 // Creamos un endpoint para devolver los AUTORES
 // server.get("/authors", async (req, res) => {
