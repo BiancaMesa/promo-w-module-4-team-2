@@ -138,10 +138,8 @@ function App() {
           }
         />
 
-       <Route path="/projects/:projectId" element = {<ProjectDetail projectsList={projectsList}/>}/>
+       <Route path="/projects/:projectId" element = {<><Header /> <ProjectDetail projectsList={projectsList}/></>}/>
           
-     
-      
         <Route
           path="/card"
           element={
