@@ -9,6 +9,7 @@ import LandingPage from "./LandingPage";
 import Projects from "./Projects";
 import "../scss/App.scss";
 import CardDetails from "./CardDetails";
+import ProjectDetail from "./ProjectDetail";
 
 function App() {
   const defaultAvatar =
@@ -137,6 +138,10 @@ function App() {
           }
         />
 
+       <Route path="/projects/:projectId" element = {<ProjectDetail projectsList={projectsList}/>}/>
+          
+     
+      
         <Route
           path="/card"
           element={

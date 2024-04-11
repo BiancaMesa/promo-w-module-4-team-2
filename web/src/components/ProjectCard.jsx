@@ -1,9 +1,16 @@
 import PropTypes from "prop-types";
 import "../scss/components/ProjectCard.scss";
+import { Link } from "react-router-dom";
+
+
+
 
 function ProjectCard({project}) {
   return (
+   
+
     <li className="project">
+       <Link to={`/projects/${project.idProject}`}> 
           <article className="projectCard">
             <h2 className="projectCard__projectTitle">
               <span className="projectCard__projectTitle--text">
@@ -67,7 +74,9 @@ function ProjectCard({project}) {
               </div>
             </div>
           </article>
+          </Link>
         </li>
+      
 
   );
 }

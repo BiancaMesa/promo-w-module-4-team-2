@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
 import "../scss/components/Projects.scss";
 
 function Projects({ addFormData, updateAvatar, updateProjectImg, previewUrl, projectsList }) {
+
+  
   return (
+    
     <main className="mainProjects">
       <section className="heroProjects">
         <Link to="/">
@@ -28,12 +32,10 @@ function Projects({ addFormData, updateAvatar, updateProjectImg, previewUrl, pro
     <section className="projectsContainer">
       <ul className="projectsList">
         {projectsList.map((project) => {
-            return <ProjectCard project={project} addFormData={addFormData} updateAvatar={updateAvatar} key={project.idProject}/>;
+            return  <ProjectCard project={project} addFormData={addFormData} updateAvatar={updateAvatar} key={project.idProject}/>;
           })}  
       </ul>
     </section>
-
-
 
   
     
