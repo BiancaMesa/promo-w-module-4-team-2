@@ -50,7 +50,7 @@ function ProjectCard({project}) {
 
                 <a
                   className="projectIcon projectIcon__www"
-                  href={project.demo}
+                  href={"http://" + project.demo}
                   target="_blank"
                   title="Haz click para ver el proyecto online"
                 >
@@ -58,7 +58,7 @@ function ProjectCard({project}) {
                 </a>
                 <a
                   className="projectIcon projectIcon__github"
-                  href={project.repo}
+                  href={"http://" + project.repo}
                   target="_blank"
                   title="Haz click para ver el código del proyecto"
                 >
