@@ -5,6 +5,7 @@ const mysql = require("mysql2/promise");
 const server = express();
 
 server.use(cors());
+server.set("view engine", "ejs");
 
 // Podemos poner un límite 
 server.use(express.json({limit: "25mb"}));
@@ -73,37 +74,22 @@ const [projectResult] = await connection.query(projectQuerySql, [
     req.body.image,
     authorResult.insertId
 ]);
-res.status(201).json({success: true, id:projectResult.insertId});
+res.status(201).json({
+    success: true, 
+    id:projectResult.insertId,
+    cardUrl: `http://localhost/detail/${id}`
+});
 });
 
 
-// Creamos un endpoint para devolver los AUTORES
-// server.get("/authors", async (req, res) => {
-
-//     try {
-//         const connection = await getDBConnection();
-
-//     const sql = "SELECT * FROM author";
-//     // Hacemos la consulta,
-//     const [authorsResult] = await connection.query(sql);
-//     console.log(authorsResult);
-
-//     //Cerrar la conexión con la base de datos
-//     connection.end();
-
-//     //Devolvemos la respuesta
-//     res.status(200).json({
-//         status: "success", 
-//         message: authorsResult, 
-//     });
-//     } catch (error) {
-//         res.status(500).json({
-//             status: "error",
-//             message: "Ha habido un error interno. Contacte suporte", 
-//         });
-//     }
-    
-// });
+//endpoint para que nos traiga de back la pagina web de detail.ejs que hemos creado en back
+server.get("/detail/:idProject", (req, res) => {
+    const {idProject} = req.params; 
+    const connection = getDBConnection(); 
+    const sqlQuery = "SELECT * FROM projectData, author WHERE projectData.fk_idAuthor = author AND projectData.idProject = ?";
+    const [result] = connection.query(sqlQuery, [idProject]);
+    res.render("detail", {project: result[0]});
+})
 
 
 const staticServer = "./web/dist";

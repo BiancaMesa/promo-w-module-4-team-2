@@ -6,6 +6,11 @@
     margin-bottom: 30px;
     list-style: none;
 
+    @media screen and (max-width: 1000px) {
+        width: 100%; 
+    }
+    
+
 }
 
 .project .project__projectImg {
