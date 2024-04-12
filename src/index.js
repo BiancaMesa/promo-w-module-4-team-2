@@ -39,7 +39,7 @@ server.get("/projects", async (req, res) => {
 
     const sql = "SELECT * FROM projectData, author WHERE projectData.fk_idAuthor = author.idAuthor";
     // Hacemos la consulta,
-    const [projectResult] = await connection.query(sql);
+    const [projectsResult] = await connection.query(sql);
     console.log(projectsResult);
 
     //Cerrar la conexión con la base de datos
