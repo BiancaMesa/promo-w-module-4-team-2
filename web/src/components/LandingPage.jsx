@@ -12,7 +12,7 @@ function LandingPage() {
         alt="proyectos-paintones"
       />
       <Link to="/card">
-        <button className="landingContainer__button">Crear tarjeta</button>
+        <button className="landingContainer__button">Nuevo Proyecto</button>
       </Link>
 
       <Link to="/projects">
