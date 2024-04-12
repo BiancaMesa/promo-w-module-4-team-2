@@ -6,9 +6,9 @@ import "../scss/components/Projects.scss";
 
 function Projects({ addFormData, updateAvatar, updateProjectImg, previewUrl, projectsList }) {
 
-  
+
   return (
-    
+
     <main className="mainProjects">
       <section className="heroProjects">
         <Link to="/">
@@ -19,26 +19,26 @@ function Projects({ addFormData, updateAvatar, updateProjectImg, previewUrl, pro
         </p>
 
         <div className="projects-buttons">
-        <Link to="/card">
-          <button className="projects-buttons__newCard">Nuevo Projecto</button>
-        </Link>
-        <Link to="/">
-          <button className="projects-buttons__landing">Volver a inicio</button>
-        </Link>
-      </div>
+          <Link to="/card">
+            <button className="projects-buttons__newCard">Nuevo Proyecto</button>
+          </Link>
+          <Link to="/">
+            <button className="projects-buttons__landing">Volver a inicio</button>
+          </Link>
+        </div>
       </section>
 
 
-    <section className="projectsContainer">
-      <ul className="projectsList">
-        {projectsList.map((project) => {
-            return  <ProjectCard project={project} addFormData={addFormData} updateAvatar={updateAvatar} key={project.idProject}/>;
-          })}  
-      </ul>
-    </section>
+      <section className="projectsContainer">
+        <ul className="projectsList">
+          {projectsList.map((project) => {
+            return <ProjectCard project={project} addFormData={addFormData} updateAvatar={updateAvatar} key={project.idProject} />;
+          })}
+        </ul>
+      </section>
 
-  
-    
+
+
     </main>
   );
 }

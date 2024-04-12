@@ -5,6 +5,7 @@
     width: 50%;
     margin-bottom: 30px;
     list-style: none;
+
 }
 
 .project .project__projectImg {
@@ -26,6 +27,13 @@
 
 .project .projectCard {
     margin-inline: 20px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8)), url('ruta/de/la/imagen.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 350px;
+    height: 355px;
+
 
 }
 
@@ -35,6 +43,7 @@
     grid-template-columns: 40% 60%;
     color: $color-black;
     font-family: $font-card-text;
+
     border-radius: 20px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -67,6 +76,7 @@
 }
 
 .projectCard .projectCard__projectTitle--text {
+
     position: relative;
     padding-inline: 0.1em;
     z-index: 1;

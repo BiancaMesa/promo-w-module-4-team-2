@@ -16,6 +16,7 @@ function ProjectDetail({ projectsList }) {
         <section className="cardDetailsContainer">
             <div className="projectImg" style={{ backgroundImage: `url(${projectImage})` }}></div>
             <article className="cardDetails">
+
                 <h2 className="cardDetails__projectTitle">
                     <span className="cardDetails__projectTitle--text">Personal Project Card</span>
                 </h2>
