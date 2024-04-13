@@ -1,11 +1,17 @@
+:root {
+  background-color: bisque;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
 .cardDetailsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .cardDetailsContainer .projectImg {
-  width: 70%;
+  width: 60%;
   aspect-ratio: 1 / 0.7;
   background-position: bottom center;
   background-size: cover;
@@ -20,11 +26,10 @@
 }
 
 .cardDetails {
-  width: 60%;
+  width: 50%;
   display: grid;
   grid-template-columns: 40% 60%;
   color: black;
-  font-family: white;
   border-radius: 20px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -42,7 +47,7 @@
   margin: 15px 10px 1rem 0;
   text-align: center;
   text-transform: capitalize;
-  font-family: white;
+
 }
 
 .cardDetails .cardDetails__projectTitle::before {
@@ -71,8 +76,8 @@
 }
 
 .cardDetails .cardDetails__authorPhoto {
-  width: 75px;
-  height: 75px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background-position: center;
   background-size: cover;
@@ -89,7 +94,7 @@
 }
 
 .cardDetails .cardDetails__name {
-  font-family: black;
+
   margin-bottom: .2rem;
 }
 
@@ -98,7 +103,7 @@
 }
 
 .cardDetails .cardDetails__slogan {
-  font-family: black;
+
   margin-top: -.2rem;
   margin-bottom: .8rem;
 }
@@ -117,9 +122,7 @@
   margin-block: 1.8rem;
 }
 
-.cardDetails .cardDetails__technologies {
-  font-family: black;
-}
+
 
 .iconDetails {
   width: 1.6rem;
@@ -139,6 +142,10 @@
   background-image: url('/globe-solid.svg');
 }
 
+.iconDetails:hover {
+  transform: scale(1.1);
+}
+
 .iconDetails__github {
   background-image: url('/github.svg');
 }
@@ -148,7 +155,7 @@
   color: white;
   padding: 10px 20px;
   font-size: 0.9rem;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
   border: none;
   border-radius: 30px;
   cursor: pointer;
