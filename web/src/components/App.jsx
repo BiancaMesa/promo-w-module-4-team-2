@@ -55,16 +55,16 @@ function App() {
     });
   };
 
-  useEffect (() => {
+  useEffect(() => {
     async function getProjects() {
       const response = await fetch("http://localhost:4000/projects");
-      const data = await response.json(); 
-      setProjectsList(data.message); 
+      const data = await response.json();
+      setProjectsList(data.message);
     }
     getProjects();
   }, []);
 
- 
+
 
   const handlePost = (event) => {
     event.preventDefault();
@@ -140,8 +140,8 @@ function App() {
           }
         />
 
-       <Route path="/projects/:projectId" element = {<><Header /> <ProjectDetail projectsList={projectsList}/></>}/>
-          
+        <Route path="/projects/:projectId" element={<><Header /> <ProjectDetail projectsList={projectsList} /></>} />
+
         <Route
           path="/card"
           element={
@@ -190,13 +190,13 @@ function App() {
           element={
             <>
               <Header />
-              <Projects 
-                  addFormData={addFormData}
-                  setAddFormData={setAddFormData}
-                  updateAvatar={updateAvatar}
-                  updateProjectImg={updateProjectImg}
-                  handleReset={handleReset}
-                  projectsList={projectsList}
+              <Projects
+                addFormData={addFormData}
+                setAddFormData={setAddFormData}
+                updateAvatar={updateAvatar}
+                updateProjectImg={updateProjectImg}
+                handleReset={handleReset}
+                projectsList={projectsList}
               />
               <Footer />
             </>
@@ -209,12 +209,12 @@ function App() {
             <>
               <Header />
               <CardDetails
-                  addFormData={addFormData}
-                  setAddFormData={setAddFormData}
-                  updateAvatar={updateAvatar}
-                  updateProjectImg={updateProjectImg}
-                  handleReset={handleReset}
-                />
+                addFormData={addFormData}
+                setAddFormData={setAddFormData}
+                updateAvatar={updateAvatar}
+                updateProjectImg={updateProjectImg}
+                handleReset={handleReset}
+              />
               <Footer />
             </>
           }

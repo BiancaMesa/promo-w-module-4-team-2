@@ -2,7 +2,7 @@ import "../scss/components/CardDetails.scss";
 import { useParams } from 'react-router-dom';
 
 function ProjectDetail({ projectsList }) {
-    console.log(projectsList)
+    /*console.log(projectsList)
     const { projectId } = useParams();
     const project = projectsList.find(project => project.idProject === parseInt(projectId));
 
@@ -40,7 +40,7 @@ function ProjectDetail({ projectsList }) {
                 </div>
             </article>
         </section>
-    );
+    );*/
 }
 
 export default ProjectDetail;
