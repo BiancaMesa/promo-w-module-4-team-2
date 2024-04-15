@@ -3,8 +3,6 @@ import "../scss/components/ProjectCard.scss";
 import { Link } from "react-router-dom";
 
 
-
-
 function ProjectCard({ project }) {
   return (
 

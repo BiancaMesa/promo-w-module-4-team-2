@@ -1,5 +1,3 @@
-//import Button from "./Button";
-import {Link} from "react-router-dom";
 import GetAvatar from "./GetAvatar";
 import "../scss/components/Form.scss";
 import PropTypes from "prop-types";
@@ -120,10 +118,6 @@ function Form({ handleFormAdd, addFormData, setUpdateAvatar, setProjectImg, hand
             </div>
           )}
         </div>
-
-        <Link to="/cardDetails">
-            <button className="seeProjectCard-btn">Ver Tarjeta Proyecto</button>
-          </Link>
       </fieldset>
     </form>
   );

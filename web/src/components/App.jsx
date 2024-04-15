@@ -8,8 +8,6 @@ import Footer from "./Footer";
 import LandingPage from "./LandingPage";
 import Projects from "./Projects";
 import "../scss/App.scss";
-import CardDetails from "./CardDetails";
-import ProjectDetail from "./ProjectDetail";
 
 function App() {
   const defaultAvatar =
@@ -140,8 +138,6 @@ function App() {
           }
         />
 
-        <Route path="/projects/:projectId" element={<><Header /> <ProjectDetail projectsList={projectsList} /></>} />
-
         <Route
           path="/card"
           element={
@@ -197,23 +193,6 @@ function App() {
                 updateProjectImg={updateProjectImg}
                 handleReset={handleReset}
                 projectsList={projectsList}
-              />
-              <Footer />
-            </>
-          }
-        />
-
-        <Route
-          path="/cardDetails"
-          element={
-            <>
-              <Header />
-              <CardDetails
-                addFormData={addFormData}
-                setAddFormData={setAddFormData}
-                updateAvatar={updateAvatar}
-                updateProjectImg={updateProjectImg}
-                handleReset={handleReset}
               />
               <Footer />
             </>

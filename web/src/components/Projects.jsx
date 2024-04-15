@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
 import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
 import "../scss/components/Projects.scss";
 
-function Projects({ addFormData, updateAvatar, updateProjectImg, previewUrl, projectsList }) {
+function Projects({ addFormData, updateAvatar, projectsList }) {
 
 
   return (

@@ -196,28 +196,5 @@
   font-style: italic;
 }
 
-.seeProjectCard-btn {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-  padding: 12px 30px;
-  background-color: rgb(253, 251, 255);
-  color: rgb(50, 146, 195);
-  font-weight: bold;
-  font-family: $font-button;
-  text-decoration: none;
-  border-radius: 25px;
-  border: 2px solid $color-white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none; //NO FUNCIONA!!! --> SOLO CON LOS a: que he puesto en reset
-  cursor: pointer;
-  
-  &:hover {
-    background-color: $color-dark-lilac;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
-    border: 2px solid lighten($color-dark-lilac, 10%);
-    color: white;
-  }
-}
+
 
