@@ -68,7 +68,7 @@ function App() {
     event.preventDefault();
     console.log("clicko");
 
-    fetch("http://localhost:4000/projects", {
+    fetch(`${process.env.URL}/projects`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

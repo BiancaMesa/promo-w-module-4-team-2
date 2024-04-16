@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 
+// configurar el servidor para poder utilizar variables de entorno
+require("dotenv").config();
+
 const server = express();
 
 server.use(cors());
