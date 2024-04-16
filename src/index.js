@@ -117,6 +117,6 @@ server.use(express.static(pathServerPublicReact));
 const pathServerPublicStyles = './src/public-css';
 server.use(express.static(pathServerPublicStyles));
 
-const pathServerPublicImages = './src/images';
-server.use(express.static(pathServerPublicImages));
+// const pathServerPublicImages = './src/images';
+// server.use(express.static(pathServerPublicImages));
 
