@@ -111,6 +111,8 @@ server.get("/detail/:idProject", async (req, res) => {
 
 
 
+const pathServerPublicReact = './src/public-react';
+server.use(express.static(pathServerPublicReact));
 
 const pathServerPublicStyles = './src/public-css';
 server.use(express.static(pathServerPublicStyles));
@@ -118,5 +120,3 @@ server.use(express.static(pathServerPublicStyles));
 const pathServerPublicImages = './src/images';
 server.use(express.static(pathServerPublicImages));
 
-const pathServerPublicReact = './src/public-react';
-server.use(express.static(pathServerPublicReact));
