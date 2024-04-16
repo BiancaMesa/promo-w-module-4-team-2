@@ -139,7 +139,7 @@
 }
 
 .iconDetails__www {
-  background-image: url('/globe-solid.svg');
+  background-image: url('/images/globe-solid.svg');
 }
 
 .iconDetails:hover {
@@ -147,7 +147,7 @@
 }
 
 .iconDetails__github {
-  background-image: url('/github.svg');
+  background-image: url('/images/github.svg');
 }
 
 .buttonDetails-reset {
