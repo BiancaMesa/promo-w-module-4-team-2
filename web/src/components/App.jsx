@@ -53,6 +53,8 @@ function App() {
     });
   };
 
+
+
   useEffect(() => {
     async function getProjects() {
       const response = await fetch(`${process.env.URL}/projects`);
