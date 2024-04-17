@@ -28,11 +28,12 @@ async function getDBConnection() {
     return connection;
 }
 
-const serverPort = process.env.URL || 4000
+const serverPort = process.env.PORT
 //const serverPort = 4000;
 server.listen(serverPort, () => {
-    console.log(`Server listening at http://localhost:${serverPort}`);
+    console.log(`Server listening at ${process.env.URL}`);
 });
+
 
 
 // Creamos un endpoint para devolver los PROJECTOS
@@ -82,7 +83,7 @@ server.post("/projects", async (req, res) => {
     res.status(201).json({
         success: true,
         id: projectResult.insertId,
-        cardURL: `http://localhost:${serverPort}/detail/${projectResult.insertId}`,
+        cardURL: `${process.env.URL}/detail/${projectResult.insertId}`,
 
     });
 
