@@ -27,8 +27,8 @@ async function getDBConnection() {
     return connection;
 }
 
-
-const serverPort = 4000;
+const serverPort = process.env.PORT || 4000
+//const serverPort = 4000;
 server.listen(serverPort, () => {
     console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -111,7 +111,7 @@ server.get("/detail/:idProject", async (req, res) => {
 
 
 
-const pathServerPublicReact = './src/public-react';
+const pathServerPublicReact = './src/public-react/assets';
 server.use(express.static(pathServerPublicReact));
 
 const pathServerPublicStyles = './src/public-css';
