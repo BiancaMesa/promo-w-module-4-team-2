@@ -31,7 +31,7 @@ async function getDBConnection() {
 const serverPort = process.env.PORT || 4000
 //const serverPort = 4000;
 server.listen(serverPort, () => {
-    console.log(`Server listening at http://localhost:${serverPort}`);
+    console.log(`Server listening at ${serverPort}`);
 });
 
 
@@ -82,7 +82,7 @@ server.post("/projects", async (req, res) => {
     res.status(201).json({
         success: true,
         id: projectResult.insertId,
-        cardURL: `http://localhost:${serverPort}/detail/${projectResult.insertId}`,
+        cardURL: `${serverPort}/detail/${projectResult.insertId}`,
 
     });
 
