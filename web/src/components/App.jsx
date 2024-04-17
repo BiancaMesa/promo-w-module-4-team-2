@@ -57,7 +57,7 @@ function App() {
 
   useEffect(() => {
     async function getProjects() {
-      const response = await fetch(`${process.env.URL}/projects/`);
+      const response = await fetch(`http://localhost:4000/projects`);
       const data = await response.json();
       setProjectsList(data.message);
     }
@@ -70,7 +70,7 @@ function App() {
     event.preventDefault();
     console.log("clicko");
 
-    fetch(`${process.env.URL}/projects/`, {
+    fetch(`http://localhost:4000/projects`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

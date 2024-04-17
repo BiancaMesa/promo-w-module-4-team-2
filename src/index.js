@@ -4,7 +4,7 @@ const mysql = require("mysql2/promise");
 
 // configurar el servidor para poder utilizar variables de entorno
 require("dotenv").config();
-dotenv.config()
+
 
 const server = express();
 
