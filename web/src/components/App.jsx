@@ -61,7 +61,7 @@ function App() {
 
   useEffect(() => {
     async function getProjects() {
-      const response = await fetch(`https://proyectos-paintones.onrender.com/projects`);
+      const response = await fetch(`http://localhost:4000/projects`);
       const data = await response.json();
       setProjectsList(data.message);
     }
@@ -74,7 +74,7 @@ function App() {
     event.preventDefault();
     console.log("clicko");
 
-    fetch(`https://proyectos-paintones.onrender.com/projects`, {
+    fetch(`http://localhost:4000/projects`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
