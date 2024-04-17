@@ -9,7 +9,11 @@ import LandingPage from "./LandingPage";
 import Projects from "./Projects";
 import "../scss/App.scss";
 
+
+
 function App() {
+
+
   const defaultAvatar =
     "https://historiaespana.es/wp-content/uploads/diego_velazquez.jpg";
   const defaultImg = "https://i.blogs.es/8c3042/meninas/1366_2000.jpg";
@@ -57,7 +61,7 @@ function App() {
 
   useEffect(() => {
     async function getProjects() {
-      const response = await fetch(`http://localhost:4000/projects`);
+      const response = await fetch(`https://proyectos-paintones.onrender.com/projects/projects`);
       const data = await response.json();
       setProjectsList(data.message);
     }
@@ -70,7 +74,7 @@ function App() {
     event.preventDefault();
     console.log("clicko");
 
-    fetch(`http://localhost:4000/projects`, {
+    fetch(`https://proyectos-paintones.onrender.com/projects/projects`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
