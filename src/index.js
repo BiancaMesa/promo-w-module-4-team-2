@@ -27,8 +27,8 @@ async function getDBConnection() {
     return connection;
 }
 
-const serverPort = process.env.PORT || 4000
-//const serverPort = 4000;
+//const serverPort = process.env.PORT || 4000
+const serverPort = 4000;
 server.listen(serverPort, () => {
     console.log(`Server listening at http://localhost:${serverPort}`);
 });
