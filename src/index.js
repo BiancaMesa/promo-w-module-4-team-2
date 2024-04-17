@@ -4,6 +4,7 @@ const mysql = require("mysql2/promise");
 
 // configurar el servidor para poder utilizar variables de entorno
 require("dotenv").config();
+dotenv.config()
 
 const server = express();
 
@@ -27,8 +28,8 @@ async function getDBConnection() {
     return connection;
 }
 
-const serverPort = process.env.PORT || 4000
-//const serverPort = 4000;
+//const serverPort = process.env.PORT || 4000
+const serverPort = 4000;
 server.listen(serverPort, () => {
     console.log(`Server listening at http://localhost:${serverPort}`);
 });
