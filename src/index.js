@@ -111,7 +111,7 @@ server.get("/detail/:idProject", async (req, res) => {
 
 
 
-const pathServerPublicReact = './src/public-react/assets';
+const pathServerPublicReact = './src/public-react';
 server.use(express.static(pathServerPublicReact));
 
 const pathServerPublicStyles = './src/public-css';
