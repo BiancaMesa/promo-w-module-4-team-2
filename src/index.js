@@ -7,6 +7,12 @@ require("dotenv").config();
 
 
 const server = express();
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 server.use(cors());
 server.set("view engine", "ejs");
