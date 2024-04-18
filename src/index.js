@@ -83,7 +83,7 @@ server.post("/projects", async (req, res) => {
     res.status(201).json({
         success: true,
         id: projectResult.insertId,
-        cardURL: `${process.env.URL}/detail/${projectResult.insertId}`,
+        cardURL: `${process.env.URL}/#/detail/${projectResult.insertId}`,
 
     });
 
@@ -91,7 +91,7 @@ server.post("/projects", async (req, res) => {
 });
 
 //endpoint para que nos traiga de back la pagina web de detail.ejs que hemos creado en back
-server.get("/detail/:idProject", async (req, res) => {
+server.get("/#/detail/:idProject", async (req, res) => {
     try {
         const { idProject } = req.params;
         const connection = await getDBConnection(); // Espera a que la conexión se establezca
