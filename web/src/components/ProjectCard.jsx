@@ -8,7 +8,7 @@ function ProjectCard({ project }) {
 
 
     <li className="project">
-      <Link to={`http://localhost:4000/detail/${project.idProject}`}>
+      <Link to={`https://proyectos-paintones.onrender.com/detail/${project.idProject}`}>
         <article className="projectCard" style={{ backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url(${project.projectImage})` }}>
           <h2 className="projectCard__projectTitle">
             <span className="projectCard__projectTitle--text">
