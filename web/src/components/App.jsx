@@ -199,6 +199,7 @@ function App() {
                 updateProjectImg={updateProjectImg}
                 handleReset={handleReset}
                 projectsList={projectsList}
+                previewUrl={previewUrl}
               />
               <Footer />
             </>

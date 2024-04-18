@@ -3,12 +3,13 @@ import "../scss/components/ProjectCard.scss";
 import { Link } from "react-router-dom";
 
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, previewUrl }) {
   return (
 
 
     <li className="project">
-      <Link to={`https://proyectos-paintones.onrender.com/detail/${project.idProject}`}>
+      {/* <Link to={`https://proyectos-paintones.onrender.com/detail/${project.idProject}`}> */}
+      <Link to={previewUrl}>
         <article className="projectCard" style={{ backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url(${project.projectImage})` }}>
           <h2 className="projectCard__projectTitle">
             <span className="projectCard__projectTitle--text">
