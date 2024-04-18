@@ -9,8 +9,6 @@ function ProjectCard({ project, previewUrl }) {
 
     <li className="project">
        <a href={`https://proyectos-paintones.onrender.com/detail/${project.idProject}`}>
-       {/* <Link to={`/detail/${project.idProject}`}> */}
-      {/* <Link to={`https://proyectos-paintones.onrender.com/detail/${project.idProject}`}> */}
         <article className="projectCard" style={{ backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url(${project.projectImage})` }}>
           <h2 className="projectCard__projectTitle">
             <span className="projectCard__projectTitle--text">
