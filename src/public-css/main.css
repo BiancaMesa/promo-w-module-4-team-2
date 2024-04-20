@@ -19,6 +19,18 @@
   border-radius: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .cardDetailsContainer .projectImg {
+    width: 90%; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardDetails {
+    width: 100%; 
+  }
+}
+
 .cardDetailsContainer .cardDetails {
   margin-inline: 20px;
   margin-top: -80px;
@@ -40,6 +52,8 @@
   border: 1px solid #E0E0E0;
   margin-left: 100px;
 }
+
+
 
 .cardDetails .cardDetails__projectTitle {
   grid-column: 2;
