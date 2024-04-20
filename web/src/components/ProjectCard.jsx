@@ -3,12 +3,13 @@ import "../scss/components/ProjectCard.scss";
 import { Link } from "react-router-dom";
 
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, previewUrl }) {
   return (
 
 
     <li className="project">
-      <Link to={`http://localhost:4000/detail/${project.idProject}`}>
+
+      <a href={`https://proyectos-paintones.onrender.com/detail/${project.idProject}`}>
         <article className="projectCard" style={{ backgroundImage: `url(${project.projectImage})` }}>
           <h2 className="projectCard__projectTitle">
             <span className="projectCard__projectTitle--text">
@@ -72,7 +73,8 @@ function ProjectCard({ project }) {
             </div>
           </div>
         </article>
-      </Link>
+        {/* </Link> */}
+      </a>
     </li>
 
 
