@@ -13,7 +13,7 @@ import "../scss/App.scss";
 
 function App() {
 
-
+  const SERVER_URL = process.env.URL === "production" ? 'https://proyectos-paintones.onrender.com' : 'http://localhost:4000'
   const defaultAvatar =
     "https://historiaespana.es/wp-content/uploads/diego_velazquez.jpg";
   const defaultImg = "https://i.blogs.es/8c3042/meninas/1366_2000.jpg";
@@ -61,7 +61,7 @@ function App() {
 
   useEffect(() => {
     async function getProjects() {
-      const response = await fetch(`https://proyectos-paintones.onrender.com/projects`);
+      const response = await fetch(`${SERVER_URL}/projects`);
       const data = await response.json();
       setProjectsList(data.message);
     }
@@ -74,7 +74,7 @@ function App() {
     event.preventDefault();
     console.log("clicko");
 
-    fetch(`https://proyectos-paintones.onrender.com/projects`, {
+    fetch(`${SERVER_URL}/projects`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -199,7 +199,7 @@ function App() {
                 updateProjectImg={updateProjectImg}
                 handleReset={handleReset}
                 projectsList={projectsList}
-                previewUrl={previewUrl}
+                SERVER_URL={SERVER_URL}
               />
               <Footer />
             </>

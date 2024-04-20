@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
 import "../scss/components/Projects.scss";
 
-function Projects({ addFormData, updateAvatar, projectsList, previewUrl }) {
+function Projects({ addFormData, updateAvatar, projectsList, SERVER_URL }) {
 
 
   return (
@@ -31,7 +31,7 @@ function Projects({ addFormData, updateAvatar, projectsList, previewUrl }) {
       <section className="projectsContainer">
         <ul className="projectsList">
           {projectsList.map((project) => {
-            return <ProjectCard project={project} addFormData={addFormData} updateAvatar={updateAvatar} key={project.idProject} previewUrl={previewUrl}/>;
+            return <ProjectCard project={project} addFormData={addFormData} updateAvatar={updateAvatar} key={project.idProject} SERVER_URL={SERVER_URL} />;
           })}
         </ul>
       </section>
