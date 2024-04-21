@@ -13,57 +13,63 @@
     <% if (!project) { %>
         <div>Proyecto no encontrado</div>
         <% } else { %>
-         <a class="back_button" href="https://proyectos-paintones.onrender.com/#/projects">Volver</a> 
-            <section class="cardDetailsContainer">
-        
-                <div class="projectImg" style="background-image: url('<%= project.projectImage %>');"></div>
 
-                <article class="cardDetails">
-                    <h2 class="cardDetails__projectTitle">
-                        <span class="cardDetails__projectTitle--text">Personal Project Card</span>
-                    </h2>
-                    <div class="cardDetails__author">
-                        <div class="cardDetails__authorPhoto"
-                            style="background-image: url('<%= project.authorImage %>');"></div>
-                        <h3 class="cardDetails__name">
-                            <%= project.authorName || "Diego Velázquez" %>
-                        </h3>
-                        <p><%= project.jobName || "Professional Baroque Artist" %></p>
+            <% const SERVER_URL=process.env.URL==="production" ? 'https://proyectos-paintones.onrender.com'
+                : 'http://localhost:4000' %>
 
-                    </div>
-                    <div class="cardDetails__project">
-                        <h3 class="cardDetails__name">
-                            <%= project.projectName || "Personal Project Card" %>
-                        </h3>
-                        <p class="cardDetails__slogan">
-                            <%= project.slogan || "“Velázquez: Donde la grandeza de la corte cobra vida en el lienzo.”"
-                                %>
-                        </p>
-                        <h3 class="cardDetails__descriptionTitle">Product description</h3>
-                        <p class="cardDetails__description">
-                            <%= project.description || `Designado por la corte de Carlos III, me enfrento al reto de
-                                plasmar “Las Meninas”, un proyecto donde arte y visión de la corte se entrelazan. Como
-                                Diego Velázquez, utilizo técnicas de claroscuro y perspectiva para capturar la
-                                complejidad y el esplendor del entorno, con cada figura meticulosamente posicionada
-                                reflejando las expectativas de mis mecenas, los verdaderos Product Owners. Este lienzo
-                                es mi campo de trabajo, donde cada pincelada une técnica y narrativa en una obra maestra
-                                destinada a perdurar.` %>
-                        </p>
-                        <div class="cardDetails__technicalInfo">
-                            <p class="cardDetails__technologies">
-                                <%= project.techs || "Oil painting" %>
+                <a class="back_button" href="<%=SERVER_URL%>/#/projects">Volver</a>
+                <section class="cardDetailsContainer">
+
+                    <div class="projectImg" style="background-image: url('<%= project.projectImage %>');"></div>
+
+                    <article class="cardDetails">
+                        <h2 class="cardDetails__projectTitle">
+                            <span class="cardDetails__projectTitle--text">Personal Project Card</span>
+                        </h2>
+                        <div class="cardDetails__author">
+                            <div class="cardDetails__authorPhoto"
+                                style="background-image: url('<%= project.authorImage %>');"></div>
+                            <h3 class="cardDetails__name">
+                                <%= project.authorName || "Diego Velázquez" %>
+                            </h3>
+                            <p>
+                                <%= project.jobName || "Professional Baroque Artist" %>
                             </p>
-                            <a class="iconDetails iconDetails__www" href="<%= 'http://' + project.demo %>"
-                                target="_blank" title="Haz click para ver el proyecto online">Web link</a>
-                            <a class="iconDetails iconDetails__github" href="<%= 'http://' + project.repo %>"
-                                target="_blank" title="Haz click para ver el código del proyecto">GitHub
-                                link</a>
-                            
+
                         </div>
-                    </div>
-                </article>
-            </section>
-            <% } %>
+                        <div class="cardDetails__project">
+                            <h3 class="cardDetails__name">
+                                <%= project.projectName || "Personal Project Card" %>
+                            </h3>
+                            <p class="cardDetails__slogan">
+                                <%= project.slogan
+                                    || "“Velázquez: Donde la grandeza de la corte cobra vida en el lienzo.”" %>
+                            </p>
+                            <h3 class="cardDetails__descriptionTitle">Product description</h3>
+                            <p class="cardDetails__description">
+                                <%= project.description || `Designado por la corte de Carlos III, me enfrento al reto de
+                                    plasmar “Las Meninas”, un proyecto donde arte y visión de la corte se entrelazan.
+                                    Como Diego Velázquez, utilizo técnicas de claroscuro y perspectiva para capturar la
+                                    complejidad y el esplendor del entorno, con cada figura meticulosamente posicionada
+                                    reflejando las expectativas de mis mecenas, los verdaderos Product Owners. Este
+                                    lienzo es mi campo de trabajo, donde cada pincelada une técnica y narrativa en una
+                                    obra maestra destinada a perdurar.` %>
+                            </p>
+                            <div class="cardDetails__technicalInfo">
+                                <p class="cardDetails__technologies">
+                                    <%= project.techs || "Oil painting" %>
+                                </p>
+                                <a class="iconDetails iconDetails__www" href="<%= 'http://' + project.demo %>"
+                                    target="_blank" title="Haz click para ver el proyecto online">Web link</a>
+                                <a class="iconDetails iconDetails__github" href="<%= 'http://' + project.repo %>"
+                                    target="_blank" title="Haz click para ver el código del proyecto">GitHub
+                                    link</a>
+
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <% } %>
 
 
 </body>
