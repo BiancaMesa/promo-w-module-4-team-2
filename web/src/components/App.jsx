@@ -13,7 +13,7 @@ import "../scss/App.scss";
 
 function App() {
 
-  const SERVER_URL = process.env.URL === "production" ? 'https://proyectos-paintones.onrender.com' : 'http://localhost:4000'
+  const SERVER_URL = 'https://proyectos-paintones.onrender.com';
   const defaultAvatar =
     "https://historiaespana.es/wp-content/uploads/diego_velazquez.jpg";
   const defaultImg = "https://i.blogs.es/8c3042/meninas/1366_2000.jpg";
