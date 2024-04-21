@@ -14,10 +14,7 @@
         <div>Proyecto no encontrado</div>
         <% } else { %>
 
-            <% const SERVER_URL=process.env.URL==="production" ? 'https://proyectos-paintones.onrender.com'
-                : 'http://localhost:4000' %>
-
-                <a class="back_button" href="<%=SERVER_URL%>/#/projects">Volver</a>
+                <a class="back_button" href="https://proyectos-paintones.onrender.com/#/projects">Volver</a>
                 <section class="cardDetailsContainer">
 
                     <div class="projectImg" style="background-image: url('<%= project.projectImage %>');"></div>
