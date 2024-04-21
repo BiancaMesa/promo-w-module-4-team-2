@@ -7,6 +7,7 @@
 
     @media screen and (max-width: 1000px) {
         width: 100%;
+
     }
 }
 
@@ -29,6 +30,11 @@
     background-position: center;
     min-height: 350px;
     height: 355px;
+
+    @media screen and (max-width: 500px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -86,25 +92,24 @@
     margin: 15px 10px 1rem 0;
     text-align: center;
     text-transform: capitalize;
+    margin-top: 15px;
 
     font-family: $font-card-section;
 }
 
-.projectCard__projectTitle {
-    margin-top: 15px;
 
-}
 
-.projectCard .projectCard__projectTitle::before {
+.projectCard .projectCard__projectTitle--text::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, -900%);
+    transform: translate(-50%, 500%);
     width: 80%;
     height: 2px;
     background-color: $color-black;
 }
+
 
 .projectCard .projectCard__projectTitle--text {
 
@@ -112,6 +117,7 @@
     padding-inline: 0.1em;
     z-index: 1;
     color: inherit;
+    //font-size: 20px;
 
 }
 

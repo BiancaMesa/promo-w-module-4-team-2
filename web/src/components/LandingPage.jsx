@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import mainImage from "../images/logo-landing.jpg";
 import "../scss/components/LandingPage.scss";
 
@@ -12,11 +12,11 @@ function LandingPage() {
         alt="proyectos-paintones"
       />
       <Link to="/card">
-        <button className="landingContainer__button">Nuevo Proyecto</button>
+        <button className="projects-buttons__newCard">Nuevo Proyecto</button>
       </Link>
 
       <Link to="/projects">
-        <button className="landingContainer__button">Ver proyectos</button>
+        <button className="projects-buttons__projects">Ver proyectos</button>
       </Link>
     </div>
   );
