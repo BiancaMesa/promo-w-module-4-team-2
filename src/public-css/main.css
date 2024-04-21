@@ -17,19 +17,17 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
-}
 
-@media screen and (max-width: 480px) {
-  .cardDetailsContainer .projectImg {
-    width: 90%; 
+  @media screen and (max-width: 850px) {
+    width: 60%; 
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80%; 
   }
 }
 
-@media screen and (max-width: 480px) {
-  .cardDetails {
-    width: 100%; 
-  }
-}
+
 
 .cardDetailsContainer .cardDetails {
   margin-inline: 20px;
@@ -51,6 +49,18 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid #E0E0E0;
   margin-left: 100px;
+
+
+  @media screen and (max-width: 850px) {
+    width: 70%; 
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 90%; 
+  }
+
+
+  
 }
 
 
